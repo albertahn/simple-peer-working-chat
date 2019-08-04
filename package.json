@@ -1,0 +1,30 @@
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "dependencies": {
+    "Scope": "github:kevincennis/Scope",
+    "body-parser": "^1.18.3",
+    "browserify-middleware": "^8.1.1",
+    "budo": "^11.6.3",
+    "canvas": "^2.4.1",
+    "color-space": "^1.16.0",
+    "cors": "^2.8.5",
+    "express": "^4.15.2",
+    "getusermedia": "^2.0.1",
+    "node-fetch": "^2.3.0",
+    "node-static": "0.7.7",
+    "simple-peer": "^9.5.0",
+    "socket.io": "^1.7.3",
+    "uuid": "^3.3.2",
+    "wrtc": "^0.4.1"
+  },
+  "scripts": {
+    "start": "budo index.js:bundle.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "budo": "^11.6.3",
+    "tape": "^4.10.0"
+  }
+}
