@@ -14,7 +14,7 @@ navigator.getUserMedia({ video: true, audio: true }, gotMedia, () => {})
  */
 
 var Peer = require('simple-peer')
-var wrtc = require('wrtc')
+//var wrtc = require('wrtc')
 //me
 
 
@@ -76,9 +76,9 @@ peer1.on('signal', function (data) {
     var peer1 = new Peer(
       {
         
-        initiator: location.hash === '#init',
+        initiator: location.hash === '#host',
         trickle: false,
-        wrtc: wrtc,
+        //wrtc: wrtc,
         stream: stream 
       })
     //var otherpeer2 = new Peer({ wrtc: wrtc })
