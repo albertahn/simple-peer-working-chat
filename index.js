@@ -22,7 +22,7 @@ var video = document.createElement('video')
 
 
     }) */
-    var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
+    var constraints = { audio: true, video: true }; 
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
       /* use the stream */
