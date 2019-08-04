@@ -17,7 +17,6 @@
     "simple-peer": "^9.5.0",
     "socket.io": "^1.7.3",
     "uuid": "^3.3.2"
-    //,"wrtc": "^0.4.1"
   },
   "scripts": {
     "start": "budo index.js:bundle.js"
