@@ -3,26 +3,8 @@
 var Peer = require('simple-peer')
 var video = document.createElement('video')
     document.body.appendChild(video)
-  // getMedia();
-
-   /* function getMedia() {
-      let stream = null;
-    
-      try {
-        stream = await navigator.mediaDevices.getUserMedia(constraints);
-       
-        gotMedia(stream);
-      } catch(err) {
-       
-      }
-    } */
-    /* navigator.mediaDevices.getUserMedia({ video: true, audio: true }, gotMedia, () => {
-
-
-
-
-    }) */
-    var constraints = { audio: true, video: true }; 
+  
+    var constraints = { audio: true, video: true };
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
       /* use the stream */
@@ -54,8 +36,8 @@ var Peer = require('simple-peer')
 
 
 /* // first deal with browser prefixes
-var getUserMedia = navigator.getUserMedia || 
-    navigator.mozGetUserMedia || 
+var getUserMedia = navigator.getUserMedia ||
+    navigator.mozGetUserMedia ||
     navigator.webkitGetUserMedia;
 
     // make sure it's supported and bind to navigator
@@ -72,10 +54,10 @@ if (getUserMedia) {
                   initiator: location.hash === '#host',
                   trickle: false,
                   //wrtc: wrtc,
-                  stream: stream 
+                  stream: stream
                 })
               peer1.on('signal', data => {
-                //GET MY DATA ON THE 
+                //GET MY DATA ON THE
                 document.getElementById('yourId').value = JSON.stringify(data)
               })
 
@@ -90,17 +72,17 @@ if (getUserMedia) {
                 document.getElementById('messages').textContent += data + '\n'
                 console.log('got a message from peer1: ' + data)
               })
-            
+
               peer1.on('stream', stream => {
                 // got remote video stream, now let's show it in a video tag
                 var video = document.querySelector('video')
-            
+
                 if ('srcObject' in video) {
                   video.srcObject = stream
                 } else {
                   video.src = window.URL.createObjectURL(stream) // for older browsers
                 }
-            
+
                 video.play()
               })
 
