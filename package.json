@@ -19,6 +19,7 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
+    "build" : "npm run build-js && npm run build-css",
     "start": "budo index.js:bundle.js"
   },
   "devDependencies": {

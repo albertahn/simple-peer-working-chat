@@ -3,7 +3,7 @@
 var Peer = require('simple-peer')
 var video = document.createElement('video')
     document.body.appendChild(video)
-  
+
     var constraints = { audio: true, video: true };
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
@@ -14,39 +14,6 @@ var video = document.createElement('video')
       /* handle the error */
       console.log(err);
     });
-
-
-// get video/voice stream
-//todo : navigator.getUserMedia({ video: true, audio: true }, gotMedia, () => {})
-/* getUserMedia({video: true, audio: true}, function (err, stream) {
-  // if the browser doesn't support user media
-  // or the user says "no" the error gets passed
-  // as the first argument.
-  if (err) {
-     console.log('failed mediaman');
-  } else {
-
-var Peer = require('simple-peer')
-  var video = document.createElement('video')
-    document.body.appendChild(video)
-    gotMedia(stream);
-  }
-
-}); */
-
-
-/* // first deal with browser prefixes
-var getUserMedia = navigator.getUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.webkitGetUserMedia;
-
-    // make sure it's supported and bind to navigator
-if (getUserMedia) {
-     gotMedia = getUserMedia.bind(navigator);
-} else {
-  // have to figure out how to handle the error somehow
-} */
-
 
  function gotMedia (stream) {
               var peer1 = new Peer(
