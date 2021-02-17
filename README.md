@@ -1,4 +1,4 @@
-# HIRE ME AS CONTRACTOR OR FULLTIME! AT albertahn.com
+# AT albertahn.com
 
 # simple-peer-working-chat and video 
 
